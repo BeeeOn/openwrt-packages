@@ -1,5 +1,5 @@
 #
-# Copyright (c) 2015, Brno University of Technology
+# Copyright (c) 2016, Brno University of Technology
 #
 # Licensing conditions are outlined in /LICENSE
 #
@@ -7,18 +7,16 @@
 include $(TOPDIR)/rules.mk
 
 PKG_NAME:=beeeon-gateway
-PKG_VERSION:=1.5
+PKG_VERSION:=1.6.1
 PKG_RELEASE:=1
 INIT_SCRIPT_NAME:=$(PKG_NAME)
 
 PKG_SOURCE:=$(PKG_NAME)-$(PKG_VERSION).tar.xz
 PKG_SOURCE_PROTO:=git
 PKG_SOURCE_SUBDIR:=$(PKG_NAME)-$(PKG_VERSION)
-PKG_SOURCE_URL:=ssh://xposto02@ant-2.fit.vutbr.cz:/srv/git/iot/adaapp-new.git
-PKG_SOURCE_VERSION:=6271e1a1c6518c81ce6512374f0333159e2b5750
 PKG_BUILD_DEPENDS:=+libmosquittopp +poco
-#PKG_SOURCE_URL:=https://github.com/BeeeOn/gateway-app.git
-#PKG_SOURCE_VERSION:=v$(PKG_VERSION)
+PKG_SOURCE_URL:=https://github.com/BeeeOn/gateway-app.git
+PKG_SOURCE_VERSION:=v$(PKG_VERSION)
 
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)/$(PKG_SOURCE_SUBDIR)
 
